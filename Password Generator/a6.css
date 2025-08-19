@@ -1,0 +1,197 @@
+body {
+  font-family: jetbrains-mono, monospace;
+  font-weight: bold;
+  background-color: hsl(200, 6%, 91%);
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+  background-color: rgb(154, 178, 247);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 5px 5px 25px hsla(0, 0%, 0%, 0.407);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+}
+
+#length {
+  width: 10%;
+  text-align: center;
+  font-size: 1.5em;
+  border: 2px solid rgba(0, 0, 0, 0.731);
+  border-radius: 5px;
+  margin-bottom: 13px;
+}
+
+#passlen {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: rgb(0, 0, 0);
+}
+
+/* 🔹 Custom Checkbox Styling */
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 2.2em;
+  color: hsl(303, 100%, 50%);
+  transition: color 0.3s;
+  margin: 8px 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.custom-checkbox .checkmark::before {
+  content: "\2713";
+  font-size: 16px;
+  color: transparent;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #333;
+  border-color: #333;
+  transform: scale(1.1) rotateZ(360deg) rotateY(360deg);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::before {
+  color: #fff;
+}
+
+.custom-checkbox:hover {
+  color: hsl(303, 72%, 39%);
+}
+
+.custom-checkbox:hover .checkmark {
+  border-color: #666;
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.custom-checkbox input[type="checkbox"]:focus + .checkmark {
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.custom-checkbox .checkmark,
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  transition: background-color 1.3s, border-color 1.3s, color 1.3s, transform 0.3s;
+}
+#mysubmit{
+  width: 16%;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: black 2px solid;
+  background-color: hsl(160, 86%, 60%);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.407);
+}
+/* From Uiverse.io by SelfMadeSystem */ 
+/* Yoinked from CodePen, but improved the animation
+so that it is smooth among other more minor things */
+
+.codepen-button {
+  display: block;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 3px;
+  isolation: isolate;
+}
+
+.codepen-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+  background-size: 25% 100%;
+  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+  animation-play-state: paused;
+  translate: -5% 0%;
+  transition: translate 0.25s ease-out;
+}
+
+.codepen-button:hover::before {
+  animation-play-state: running;
+  transition-duration: 0.75s;
+  translate: 0% 0%;
+}
+
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+.codepen-button span {
+  position: relative;
+  display: block;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  background: #000000;
+  color: #4fcf70;
+  border-radius: 3px;
+  height: 100%;
+}
+#mysubmit {
+  display: block;
+  margin: 20px auto 10px auto; /* centers the button */
+}
+
+#result {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  width: 60%;          /* same width look */
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 5px 5px 15px hsla(0,0%,0%,0.2);
+  display: block;
+  margin: 10px auto 0 auto; /* centers it under button */
+  font-family: jetbrains-mono, monospace;
+}
+
+
+

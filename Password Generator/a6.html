@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="a6.css" />
+  </head>
+  <body>
+    <h1>Random Password Generator</h1>
+    <h2>
+      <u>
+        Instantly create strong and secure passwords to keep your accounts safe
+        online
+      </u>
+    </h2>
+
+    <label id="passlen">Password Length: </label>
+    <input type="number" id="length" value="8" min="1" /><br /><br />
+
+    <!-- Uppercase -->
+    <label class="custom-checkbox">
+      <input type="checkbox" id="uppercase" checked />
+      <span class="checkmark"></span>
+      UpperCase
+    </label>
+    <br />
+
+    <!-- Lowercase -->
+    <label class="custom-checkbox">
+      <input type="checkbox" id="lowercase" checked />
+      <span class="checkmark"></span>
+      LowerCase
+    </label>
+    <br />
+
+    <!-- Numbers -->
+    <label class="custom-checkbox">
+      <input type="checkbox" id="numbers" checked />
+      <span class="checkmark"></span>
+      Numbers
+    </label>
+    <br />
+
+    <!-- Symbols -->
+    <label class="custom-checkbox">
+      <input type="checkbox" id="symbols" checked />
+      <span class="checkmark"></span>
+      Symbols
+    </label>
+    <br /><br />
+    <a class="codepen-button" id="mysubmit"><span>Get Password</span></a>
+
+    <input id="result" type="text" readonly />
+
+    <script src="a6.js"></script>
+  </body>
+</html>
